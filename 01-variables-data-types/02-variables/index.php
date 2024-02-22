@@ -16,51 +16,10 @@ CONVENTIONS:
 - lowercase: $servername
 */
 
-$title = "replace php from class";
+$title = "VARIABLE RULES";
 $heading = "PHP variable Types";
 
-// ------ types of Data types --------
-$name = 'Harmony';
-$lastName = 'Kunu';
 
-var_dump($name);
-echo '<br>';
-echo getType($name);
-echo '<br>';
-
-// ------- Integer ------
-$age = 3;
-var_dump($age);
-echo '<br>';
-
-// ------ Float ------
-$ratings = 4.6;
-var_dump($ratings);
-echo '<br>';
-
-// ------- Boolean ------
-$isMarried = true;
-var_dump($isMarried);
-echo '<br>';
-
-// -- Array --------
-$listHobbits = ['football', 'coding', 'video_game', 'reading'];
-var_dump($listHobbits);
-echo '<br>';
-//------------ Object ---------
-$person = new stdClass();
-var_dump($person);
-echo '<br>';
-
-// ------- Null ------
-$hasAHouse = null;
-var_dump($hasAHouse);
-echo '<br>';
-
-
-//--  Resource File --- type  
-// $file = fopen('sample,pdf ', 'r');
-// var_dump($file);
 ?>
 
 
@@ -84,7 +43,7 @@ echo '<br>';
     </header>
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold mb-4">Welcome To The Course</h2>
+            <h2 class="text-2xl font-semibold mb-4">VARIABLE RULES</h2>
             <p>In this course, you will learn the fundamentals of the PHP language</p>
         </div>
     </div>
