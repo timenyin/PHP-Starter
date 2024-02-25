@@ -1,5 +1,38 @@
 <?php
 $output = null;
+$string = "hello world";
+
+//  ====== strlen ======
+$output = strlen($string); // --count number of letter ----
+
+// ----- str_word_count ----
+$output = str_word_count($string); // ---count each  words ------
+
+//-strpos-----
+$output = strpos($string, 'world'); // ---- count a particular world -----
+
+// - Get specific --------
+$output = $string[8]; // -- get a character from a string using the index ---
+
+
+// - substr ----
+$output = substr($string, 6, 5); // -------- get part of thr strings -------
+
+//  ---- str_replace -------
+$output = str_replace('world', strtoupper('Harmony'), $string);
+
+
+
+// ----- Uppercase string ---------
+$output = strtoupper($string);
+
+//----  first letter uppercase ---- ucwords --------
+$output = ucwords($string);
+
+//-trim -----------
+$output = trim(' Hello world  '); // to clear out space between worlds ----------
+
+
 ?>
 
 <!DOCTYPE html>
