@@ -59,7 +59,9 @@ $tagsArr = explode(',', $tags);
 
 
 //-----implode --- array to string ----
-$output = implode(',', $users)
+$output = implode(',', $users);
+
+
 
 ?>
 
