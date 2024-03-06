@@ -50,6 +50,7 @@ $listings = [
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../main.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Job Listings</title>
 </head>
@@ -62,45 +63,29 @@ $listings = [
   </header>
   <div class="container mx-auto p-4 mt-4">
     <!-- Output -->
-    <div class="md my-4">
-      <div class="bg-white rounded-lg shadow-md">
-        <div class="p-4">
-          <h2 class="text-xl font-semibold">Software Engineer</h2>
-          <p class="text-gray-700 text-lg mt-2">We are seeking a skilled software engineer to develop high-quality software solutions.</p>
-          <ul class="mt-4">
-            <li class="mb-2">
-              <strong>Salary:</strong> $80,000
-            </li>
-            <li class="mb-2">
-              <strong>Location:</strong> San Francisco
-            </li>
-            <li class="mb-2">
-              <strong>Tags:</strong> Software Development, Java, Python
-            </li>
-          </ul>
+    <?php foreach ($listings as $list) : ?>
+      <div class="md my-4">
+        <div class="bg-white rounded-lg shadow-md">
+          <div class="p-4">
+            <h2 class="text-xl font-semibold"><?= $list['title']  ?></h2>
+            <p class="text-gray-700 text-lg mt-2"><?= $list['description'] ?></p>
+            <ul class="mt-4">
+              <li class="mb-2">
+                <strong>Salary:</strong> <?= $list['salary'] ?>
+              </li>
+              <li class="mb-2">
+                <strong>Location:</strong> <?= $list['location'] ?>
+              </li>
+              <li class="mb-2">
+                <strong>Tags:</strong> <?= implode(', ', $list['tags']) ?>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    <?php endforeach ?>
 
-    <div class="md my-4">
-      <div class="bg-white rounded-lg shadow-md">
-        <div class="p-4">
-          <h2 class="text-xl font-semibold">Marketing Specialist</h2>
-          <p class="text-gray-700 text-lg mt-2">We are looking for a marketing specialist to develop and implement effective marketing strategies.</p>
-          <ul class="mt-4">
-            <li class="mb-2">
-              <strong>Salary:</strong> $60,000
-            </li>
-            <li class="mb-2">
-              <strong>Location:</strong> New York
-            </li>
-            <li class="mb-2">
-              <strong>Tags:</strong> Digital Marketing, Social Media, SEO
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+
   </div>
 </body>
 
