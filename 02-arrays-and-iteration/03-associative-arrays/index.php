@@ -8,14 +8,24 @@ $user = [
     'hobbies' => ['Football', 'swimming', 'gym', 'video_game']
 
 ];
+
+$user2 = [
+    'name' => 'timenyin',
+    'email' => 'timenyin@gmail.com',
+    'password' => 557755,
+    'hobbies' => ['football', 'programming', 'video games'],
+];
 // -- get the arrays ------
 $output = $user['name'];
+$output = $user2['password'];
 
 $output = $user['hobbies'][3];
 
 // ---- Add array ----
 $user['address'] = '123 main ST Road';
 $user['hobbies'][4] = 'coding';
+$user2['frameworks'] = 'bootstrap';
+
 
 // ---- remove array ------
 unset($user['address']);

@@ -6,7 +6,15 @@
 */
 echo 'html';
 echo '<br>';
-print 'harmony'
+print 'harmony';
+
+echo '<br/>';
+
+$message = 'how u doing';
+$$message = 'harmony';
+echo $message, " ",  $$message;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +40,10 @@ print 'harmony'
             <p>In this course, you will learn the fundamentals of the PHP language</p>
         </div>
     </div>
+
+    <form action="post" id="testForm" name="testForm">
+        <input type="submit" name="btnpost" value="submit" autofocus onclick="return true;">
+    </form>
 </body>
 
 </html>

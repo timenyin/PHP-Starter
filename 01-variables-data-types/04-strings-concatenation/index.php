@@ -27,8 +27,9 @@ $fullName = $firstName . ' ' . $lastName;
             <!-- Output -->
             <?= 'Hello my name is' . ' ' .  $fullName . '<br>' ?>
             <?= "Hello her name is  $firstName" . '<br>' ?>
-            <?= "hello my name is 'harmony' " . '<br>'?>
+            <?= "hello my name is 'harmony' " . '<br>' ?>
             <?= 'hello my name is \'kunu\' ' . '<br>' ?>
+            <?= 'hello my name is' . ' ' . $fullName . ' ' . 'last name is ' . ' ' . $lastName ?>
         </div>
     </div>
 </body>

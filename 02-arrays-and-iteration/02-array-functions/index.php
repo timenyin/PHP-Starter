@@ -2,7 +2,7 @@
 $output = null;
 
 $ids = [10, 45, 32, 77, 87, 99];
-$users = ['user1', 'user2', 'user4', 'user3'];
+$users = ['user1', 'user2', 'user4', 'user3', 'user4'];
 
 $output = count($ids);
 
@@ -55,7 +55,7 @@ $output = 'User 3 exists:' . in_array('user3', $users);
 //----- explode string into array ---
 $tags = 'tech,code,programming';
 $tagsArr = explode(',', $tags);
-// var_dump($tagsArr)
+// var_dump($tagsArr);
 
 
 //-----implode --- array to string ----

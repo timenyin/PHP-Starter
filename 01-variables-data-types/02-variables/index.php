@@ -18,6 +18,7 @@ CONVENTIONS:
 
 $title = "VARIABLE RULES";
 $heading = "PHP variable Types";
+$text = "In this course, you will learn the fundamentals of the PHP language";
 
 
 ?>
@@ -44,7 +45,9 @@ $heading = "PHP variable Types";
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6">
             <h2 class="text-2xl font-semibold mb-4">VARIABLE RULES</h2>
-            <p>In this course, you will learn the fundamentals of the PHP language</p>
+            <p>
+                <?= $text ?>
+            </p>
         </div>
     </div>
 </body>

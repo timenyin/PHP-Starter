@@ -39,6 +39,9 @@ echo '<br>';
 
 // -- Array --------
 $listHobbits = ['football', 'coding', 'video_game', 'reading'];
+$listOfBooks = ['english2.0',  'understanding js', 'introduction to HTML'];
+var_dump($listOfBooks);
+echo '<br>';
 var_dump($listHobbits);
 echo '<br>';
 //------------ Object ---------

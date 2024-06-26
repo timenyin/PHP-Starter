@@ -7,6 +7,17 @@ $fruits = [
 
 ];
 
+$frameworks = [
+  ['HTML', 'Bootstrap5'],
+  ['Javascript', 'React'],
+  ['PHP', 'Larval'],
+];
+
+//- add more frame work ---
+$output = $frameworks[] = ['Database', 'mySQL'];
+
+
+
 $output = $fruits[1][2];
 
 $fruits[] = ['Grape', 'Purple'];
@@ -69,6 +80,13 @@ $output = count($users);
       <p>
       <pre>
           <?= print_r($users) // print_r($fruits)  
+          ?>
+        </pre>
+      </p>
+
+      <p>
+      <pre>
+          <?= print_r($frameworks) // print_r($fruits)  
           ?>
         </pre>
       </p>

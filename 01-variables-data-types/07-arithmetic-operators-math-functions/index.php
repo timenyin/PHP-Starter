@@ -23,14 +23,17 @@ $output = "$num1 % $num2 = " . $num1 % $num2;
 
 // ------- Assignment Operator --------
 $num3 = 10;
+$num4 = 99;
 //$num3 = $num3 + 20;
 // ------- OR -------
 $num3 += 20;
 $num3 -= 20;
 $num3 /= 2;
 
+$num4 /= 11;
 
 $output = $num3;
+$output = $num4;
 
 //  ------ Build-in PHP Functions -------
 
@@ -50,6 +53,7 @@ $output = $num3;
 
 */
 
+// 
 $output = rand();
 
 $output = getrandmax();
