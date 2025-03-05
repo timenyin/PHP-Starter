@@ -4,10 +4,15 @@ $output = null;
 $ids = [10, 45, 32, 77, 87, 99];
 $users = ['user1', 'user2', 'user4', 'user3', 'user4'];
 
-$output = count($ids);
 
+// count function
+$output = count($ids); // get the number of array's 
+
+
+// sort
 sort($ids);
 sort($users);
+
 
 // revers order ------
 rsort($ids);
@@ -40,7 +45,7 @@ $ids2 = array_slice($ids, 2, 3);
 array_splice($ids, 2, 2, 'new Id');
 
 // ---- array sum-----
-$output = 'sum of IDs: ' . array_sum($ids);
+// $output = 'sum of IDs: ' . array_sum($ids);
 
 //---- array_search ------
 $output = 'user 2 is a index: ' . array_search('user2', $users);

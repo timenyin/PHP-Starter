@@ -37,6 +37,7 @@ echo $numbers[4];
 // add elements to array 
 
 $numbers[6] = 100; // -add to the end of array ------
+$number[] = 200;
 inspect($numbers);
 echo '<br/>';
 $nameTwo[4] = 'mark';

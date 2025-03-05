@@ -40,9 +40,13 @@ echo '<br>';
 // -- Array --------
 $listHobbits = ['football', 'coding', 'video_game', 'reading'];
 $listOfBooks = ['english2.0',  'understanding js', 'introduction to HTML'];
+$listOfCodingNames = ['php', 'javascript', 'java', 'python', 'java', 'C#'];
 var_dump($listOfBooks);
 echo '<br>';
 var_dump($listHobbits);
+echo '<br>';
+
+var_dump($listOfCodingNames);
 echo '<br>';
 //------------ Object ---------
 $person = new stdClass();
@@ -56,5 +60,5 @@ echo '<br>';
 
 
 //--  Resource File --- type  
-// $file = fopen('sample,pdf ', 'r');
+$file = fopen('sample.pdf ', 'r');
 // var_dump($file);

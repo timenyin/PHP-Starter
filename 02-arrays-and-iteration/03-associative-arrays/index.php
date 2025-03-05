@@ -9,6 +9,14 @@ $user = [
 
 ];
 
+$JumiaUsers = [
+    'name' => 'Jumia Agent',
+    'email' => 'jumia@gmail.com',
+    'password' => '88888',
+    'Goods' => ['cooking gas', 'phone', 'watch', 'airpods']
+
+];
+
 $user2 = [
     'name' => 'timenyin',
     'email' => 'timenyin@gmail.com',
@@ -19,16 +27,19 @@ $user2 = [
 $output = $user['name'];
 $output = $user2['password'];
 
-$output = $user['hobbies'][3];
+$output = $JumiaUsers['name'];
+$output = $JumiaUsers['hobbies'];
+
+// $output = $user['hobbies'][3];
 
 // ---- Add array ----
-$user['address'] = '123 main ST Road';
-$user['hobbies'][4] = 'coding';
-$user2['frameworks'] = 'bootstrap';
+// $user['address'] = '123 main ST Road';
+// $user['hobbies'][4] = 'coding';
+// $user2['frameworks'] = 'bootstrap';
 
 
-// ---- remove array ------
-unset($user['address']);
+// // ---- remove array ------
+// unset($user['address']);
 
 
 // var_dump($user);
@@ -58,6 +69,12 @@ unset($user['address']);
             <p>
             <pre>
                 <?= print_r($user) ?>
+            </pre>
+            </p>
+
+            <p>
+            <pre>
+                <?= print_r($JumiaUsers) ?>
             </pre>
             </p>
         </div>

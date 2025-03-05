@@ -13,6 +13,13 @@ $frameworks = [
   ['PHP', 'Larval'],
 ];
 
+$EngineeringCourse = [
+  ['Mechanical', 'MEE321'],
+  ['Civil', 'CV235'],
+  ['EEE', 'EEE501'],
+  ['CPU', 'CPU211'],
+];
+
 //- add more frame work ---
 $output = $frameworks[] = ['Database', 'mySQL'];
 
@@ -30,6 +37,12 @@ $users = [
   ['name' => 'Okafo', 'email' => 'Okafo@gmail.com', 'password' => '34567'],
 
   ['name' => 'Mike', 'email' => 'Mike@gmail.com', 'password' => '456789']
+];
+
+$Department = [
+  ['mechanical' => 'mat200', 'level' => '200', 'grade' => 'A'],
+  ['civil' => 'cve401', 'level' => '400',  'grade' => 'B'],
+  ['electrical' => 'eee509', 'level' => '500',  'grade' => 'C'],
 ];
 
 $output = $users[3]['password'];
@@ -53,7 +66,13 @@ unset($users[2]);
 // ---- show a particular array ------
 $output = $users[1]['email'];
 
-$output = count($users);
+$output = $Department[1]['grade'];
+
+
+// get the number total of array 
+// $output = count($users);
+
+$output = count($Department);
 
 ?>
 
@@ -87,6 +106,14 @@ $output = count($users);
       <p>
       <pre>
           <?= print_r($frameworks) // print_r($fruits)  
+          ?>
+        </pre>
+      </p>
+
+
+      <p>
+      <pre>
+          <?= print_r($Department) // print_r($fruits)  
           ?>
         </pre>
       </p>

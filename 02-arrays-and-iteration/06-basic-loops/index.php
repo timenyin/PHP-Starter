@@ -1,14 +1,14 @@
 <?php
-// for ($i = 0; $i <= 10; $i++) {
+// for ($i = 5; $i <= 10; $i++) {
 //     echo $i . '<br />';
 // }
 
 // ----- while loop ----
-// $harmony = 0;
-// while ($harmony < 20) {
-//     echo  $harmony . '<br />';
-//     $harmony++;
-// }
+$harmony = 0;
+while ($harmony < 10) {
+    echo  $harmony . '<br />';
+    $harmony++;
+}
 
 
 // ---- Do-While Loop ----------
@@ -62,7 +62,7 @@
 
                 <?php $harmony = 0;
                 do { ?>
-                    <li>Number: <?= $harmony ?></li>
+                <li>Number: <?= $harmony ?></li>
                 <?php $harmony++;
                 } while ($harmony < 10)
                 ?>

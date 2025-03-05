@@ -1,6 +1,7 @@
 <?php
 $firstName = 'Harmony';
 $lastName = 'Kunu';
+$jobPosition = "WEB Developer";
 
 $fullName = $firstName . ' ' . $lastName;
 
@@ -29,6 +30,7 @@ $fullName = $firstName . ' ' . $lastName;
             <?= "Hello her name is  $firstName" . '<br>' ?>
             <?= "hello my name is 'harmony' " . '<br>' ?>
             <?= 'hello my name is \'kunu\' ' . '<br>' ?>
+            <?= 'my Job Position in Office is' .  ' ' . $jobPosition . '<br>' ?>
             <?= 'hello my name is' . ' ' . $fullName . ' ' . 'last name is ' . ' ' . $lastName ?>
         </div>
     </div>
