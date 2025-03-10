@@ -6,7 +6,7 @@ $listings = [
     'description' => 'We are seeking a skilled software engineer to develop high-quality software solutions.',
     'salary' => 80000,
     'location' => 'San Francisco',
-    'tags' => ['Software Development', 'Java', 'Python']
+    'tags' => ['Software Development', 'Java', 'Python', 'SEO']
   ],
   [
     'id' => 2,
@@ -41,6 +41,17 @@ $listings = [
     'tags' => []
   ],
 ];
+
+function formatSalary($salary)
+{
+  return '$' . number_format($salary);
+}
+
+function highlightTags($tags, $searchTerm)
+{
+  $tagsStr = implode(', ', $tags);
+  return str_replace($searchTerm, "<span class='bg-yellow-200'> {$searchTerm}</span>", $tagsStr);
+}
 ?>
 
 
@@ -48,45 +59,43 @@ $listings = [
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Job Listings</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com/3.3.5"></script>
+    <title>Job Listings</title>
 </head>
 
 <body class="bg-gray-100">
-  <header class="bg-blue-500 text-white p-4">
-    <div class="container mx-auto">
-      <h1 class="text-3xl font-semibold">Job Listings</h1>
-    </div>
-  </header>
-  <div class="container mx-auto p-4 mt-4">
-    <?php foreach ($listings as $index => $job) : ?>
-      <div class="md my-4">
-        <div class="rounded-lg shadow-md <?= $index % 2 === 0 ? 'bg-blue-100' : 'bg-white' ?>">
-          <div class="p-4">
-            <h2 class="text-xl font-semibold"><?= $job['title'] ?></h2>
-            <p class="text-gray-700 text-lg mt-2"><?= $job['description'] ?></p>
-            <ul class="mt-4">
-              <li class="mb-2">
-                <strong>Salary:</strong> <?= $job['salary'] ?>
-              </li>
-              <li class="mb-2">
-                <strong>Location:</strong> <?= $job['location'] ?>
-
-                <span class="text-xs text-white <?= $job['location'] === 'New York' ? 'bg-blue-500' : 'bg-green-500'; ?> rounded-full px-2 py-1 ml-2"><?= $job['location'] === 'New York' ? 'Local' : 'Remote'; ?></span>
-              </li>
-              <?php if (!empty($job['tags'])) : ?>
-                <li class="mb-2">
-                  <strong>Tags:</strong> <?= implode(', ', $job['tags']) ?>
-                </li>
-              <?php endif; ?>
-            </ul>
-          </div>
+    <header class="bg-blue-500 text-white p-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-semibold">Job Listings</h1>
         </div>
-      </div>
-    <?php endforeach; ?>
-  </div>
+    </header>
+    <div class="container mx-auto p-4 mt-4">
+        <?php foreach ($listings as $index => $job) : ?>
+        <div class="md my-4">
+            <div class="rounded-lg shadow-md <?= $index % 2 === 0 ? 'bg-blue-100' : 'bg-white' ?>">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold"><?= $job['title'] ?></h2>
+                    <p class="text-gray-700 text-lg mt-2"><?= $job['description'] ?></p>
+                    <ul class="mt-4">
+                        <li class="mb-2">
+                            <strong>Salary:</strong> <?= formatSalary($job['salary']) ?>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Location:</strong> <?= $job['location'] ?>
+
+                            <span
+                                class="text-xs text-white <?= $job['location'] === 'New York' ? 'bg-blue-500' : 'bg-green-500'; ?> rounded-full px-2 py-1 ml-2"><?= $job['location'] === 'New York' ? 'Local' : 'Remote'; ?></span>
+                        </li>
+                        <?= (!empty($job['tags'])) ? '<li class="mb-2 px-2"><strong>Tags:</strong> 
+              ' . highlightTags($job['tags'], 'SEO') . '</li>' : '' ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
 </body>
 
 </html>

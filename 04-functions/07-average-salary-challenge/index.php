@@ -42,16 +42,44 @@ $listings = [
   ],
 ];
 
-function formatSalary($salary)
-{
-  return '$' . number_format($salary);
-}
+
 
 function highlightTags($tags, $searchTerm)
 {
   $tagsArray = implode(', ', $tags);
   return str_replace($searchTerm, "<span class='bg-yellow-200'>$searchTerm</span>", $tagsArray);
 }
+
+function averageSalary($jobSalaries)
+{
+  // Check if the array is empty to avoid division by zero
+  if (empty($jobSalaries)) {
+    return 'N/A'; // or return 0, or any other placeholder
+  }
+
+  // Extract salaries from the jobSalaries array
+  $salaries = array_column($jobSalaries, 'salary');
+
+  // Calculate total salaries and number of salaries
+  $totalSalaries = array_sum($salaries);
+  $NumberSalary = count($salaries);
+
+  // Calculate the average salary
+  $averageSalaries = $totalSalaries / $NumberSalary;
+
+  // Format the salary (assuming formatSalary is defined)
+  return formatSalary($averageSalaries);
+}
+
+function formatSalary($salary)
+{
+  return '$' . number_format($salary);
+}
+
+// Extract salaries from the listings array
+$jobSalaries = array_map(function ($job) {
+  return ['salary' => $job['salary']];
+}, $listings);
 ?>
 
 
@@ -73,7 +101,7 @@ function highlightTags($tags, $searchTerm)
   </header>
   <div class="container mx-auto p-4 mt-4">
     <div class="bg-green-100 rounded-lg shadow-md p-6 my-6">
-      <h2 class="text-2xl font-semibold mb-4">Average Salary:</h2>
+      <h2 class="text-2xl font-semibold mb-4">Average Salary:<?= averageSalary($jobSalaries) ?></h2>
     </div>
     <!-- Output -->
     <?php foreach ($listings as $index => $job) : ?>
