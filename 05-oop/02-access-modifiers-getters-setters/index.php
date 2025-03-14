@@ -6,6 +6,12 @@ class User
   public $name;
   public $email;
 
+  // using private 
+  //private $status = 'active'; 
+
+  // using protected 
+  protected $status = 'active';
+
   public function __construct($name, $email)
   {
     $this->name = $name;
@@ -16,6 +22,17 @@ class User
   public function login()
   {
     echo $this->name . ' logged in <br>';
+  }
+
+  // show private in public
+  public function getStatus()
+  {
+    echo $this->status;
+  }
+  // show private in public
+  public function setStatus($status)
+  {
+    $this->status = $status;
   }
 }
 
@@ -28,4 +45,8 @@ $user2 = new User('Jane Doe', 'jane@gmail.com');
 
 $user2->login();
 
-// var_dump($user2);
+$user2->setStatus('inactive');
+$user2->getStatus();
+$user1->status;
+
+// var_dump($user2);   
